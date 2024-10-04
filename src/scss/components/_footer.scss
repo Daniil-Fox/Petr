@@ -8,29 +8,54 @@
   background-repeat: no-repeat;
   background-position: left center;
 
+  @include small-tablet {
+    padding: 3rem 0;
+    background-size: 23.4rem auto;
+    background-position: left top;
+  }
+
 
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 100rem;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
   }
 
   &__logo {
     display: inline-flex;
     width: auto;
     flex-direction: column;
-    font-family: var(--third-family);
-    font-weight: 400;
-    font-size: 4rem;
+
     color: #080808;
 
-    img {
+    &>img {
       display: block;
       margin: 0 auto;
       width: 14.2rem;
       height: auto;
       object-fit: contain;
+
+      @include small-tablet {
+        width: 6.2rem;
+        margin-bottom: .8rem;
+      }
+    }
+
+    span {
+      img {
+        width: 23rem;
+        height: auto;
+        object-fit: contain;
+
+        @include small-tablet {
+          width: 12rem;
+        }
+      }
     }
   }
 
@@ -50,6 +75,10 @@
     font-weight: 400;
     font-size: 1.4rem;
     color: #616161;
+
+    @include mobile {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -59,6 +88,9 @@
   justify-content: space-between;
   gap: 4.5rem 23rem;
 
+  @include small-tablet {
+    gap: 1.5rem 3.5rem;
+  }
 
   span {
     display: block;
@@ -81,8 +113,33 @@
       text-transform: uppercase;
       color: #303030;
 
+      @include mobile {
+        font-size: 1.1rem;
+      }
+
       a {
         color: inherit;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 10%;
+          height: 1px;
+          opacity: 0;
+          background-color: currentColor;
+          transition: .3s ease-out;
+        }
+
+        @include hover {
+          &::after {
+            width: 100%;
+            opacity: 1;
+          }
+        }
       }
 
       &:not(:last-child) {

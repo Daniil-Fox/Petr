@@ -28,6 +28,11 @@
     height: 37.6rem;
     width: 27.5rem;
 
+    @include small-tablet {
+      width: 22.6rem;
+      height: 31rem;
+    }
+
     img,
     video {
       width: 100%;

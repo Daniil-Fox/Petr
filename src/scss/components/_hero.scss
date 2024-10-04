@@ -3,10 +3,25 @@
   background-image: url('./../img/hero.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 
   &__container {
     height: 100%;
+  }
+
+  &__logo {
+    width: 60.7rem;
+    height: auto;
+
+    @include small-tablet {
+      width: 30.4rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   }
 
   &__content {
@@ -15,12 +30,23 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100%;
+
+    @include small-tablet {
+      padding-top: 10rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
   }
 
   &__link {
@@ -51,6 +77,7 @@
         width: 120%;
       }
     }
+
   }
 
   &__desc {
@@ -60,5 +87,14 @@
     line-height: 120%;
     text-align: right;
     color: #000;
+
+    @include small-tablet {
+      align-self: flex-end;
+
+    }
+
+    @include mobile {
+      font-size: 1.2rem;
+    }
   }
 }

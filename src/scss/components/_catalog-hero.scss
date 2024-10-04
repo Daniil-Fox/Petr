@@ -1,0 +1,75 @@
+.catalog-hero {
+  padding: 9rem 0 22rem;
+  background-image: url('./../img/catalog-bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__left {
+    grid-column: 5 span;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__right {
+    grid-column: 8 span;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__desc {
+    color: #fff;
+  }
+
+  &__img {
+    min-height: 56.3rem;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-position: right;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem 2rem;
+  }
+}
+
+.ch-item {
+  display: block;
+
+  &__img {
+    height: 50rem;
+    margin-bottom: 2.7rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__capture {
+    p {
+      color: #fff;
+    }
+  }
+}
