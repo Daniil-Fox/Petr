@@ -1,0 +1,14 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__link {
+    font-weight: 200;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #303030;
+  }
+}

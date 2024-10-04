@@ -1,0 +1,16 @@
+.collection {
+  padding: 8.5rem 0;
+
+  &__title {
+    margin-bottom: 9rem;
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

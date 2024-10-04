@@ -1,0 +1,27 @@
+.about-hero {
+  padding: 9.3rem 0 4.4rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    &--row {
+      min-height: 35rem;
+    }
+  }
+
+  &__item {
+
+    video,
+    iframe,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

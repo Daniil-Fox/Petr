@@ -1,0 +1,64 @@
+.hero {
+  height: 100vh;
+  background-image: url('./../img/hero.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__content {
+    padding: 16rem 0 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #303030;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 110%;
+      height: .8rem;
+      background-image: url('./../img/arr-right.svg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: right;
+
+      transition: .3s ease-out;
+    }
+
+    @include hover {
+      &::after {
+        width: 120%;
+      }
+    }
+  }
+
+  &__desc {
+    max-width: 26rem;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-align: right;
+    color: #000;
+  }
+}
