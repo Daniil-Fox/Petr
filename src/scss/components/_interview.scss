@@ -1,0 +1,66 @@
+.interview {
+  margin-bottom: 7.2rem;
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+
+      @include small-tablet {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    video,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__thumb {
+    height: 20rem;
+    margin-bottom: 1.5rem;
+
+    @include small-tablet {
+      height: auto;
+      margin-bottom: 0.4rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__capture {
+    font-size: 1.8rem;
+
+    @include small-tablet {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__thumbs {
+
+    @include small-tablet {
+      .swiper-slide {
+        width: 70%;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,9 +21,9 @@
   <script defer src="js/main.js"></script>
 </head>
 
-  <body class="page__body">
-    <div class="site-container">
-      <header class="header">
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
   <div class="container">
     <div class="header__container">
       <nav class="header__nav nav">
@@ -63,8 +63,8 @@
           <li class="nav__item">
             <a href="#" class="nav__link">О бренде</a>
           </li>
-          <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">ИНТЕРВЬЮ</a></li>
+          <li class="nav__item"><a href="./catalog.html" class="nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="./#interview" class="nav__link">ИНТЕРВЬЮ</a></li>
         </ul>
       </nav>
     </div>
@@ -85,8 +85,8 @@
   </div>
 
 </header>
-      <main class="main">
-        <section class="hero">
+    <main class="main">
+      <section class="hero">
   <div class="container hero__container">
     <div class="hero__content">
       <div class="hero__logo">
@@ -199,7 +199,7 @@
   </div>
 </section>
 
-        <section class="gallery">
+      <section class="gallery">
   <h2 class="visually-hidden">title</h2>
 
   <div class="gallery__slider swiper">
@@ -367,8 +367,65 @@
   </div>
 </section>
 
-      </main>
-      <footer class="footer">
+      <div class="interview" id="interview">
+  <div class="container">
+    <h2 class="title2 interview__title">ИНТЕРВьЮ о бренде</h2>
+    <div class="swiper interview__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="interview__video">
+            <video src="" poster="./img/interview.webp"></video>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="interview__video">
+            <video src="" poster="./img/interview.webp"></video>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="interview__video">
+            <video src="" poster="./img/interview.webp"></video>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="interview__video">
+            <video src="" poster="./img/interview.webp"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper interview__thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="interview__thumb">
+            <img src="./img/interview.webp">
+          </div>
+          <div class="interview__capture desc">О Петре</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="interview__thumb">
+            <img src="./img/interview.webp">
+          </div>
+          <div class="interview__capture desc">О планах на будущее</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="interview__thumb">
+            <img src="./img/interview.webp">
+          </div>
+          <div class="interview__capture desc">О продукте</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="interview__thumb">
+            <img src="./img/interview.webp">
+          </div>
+          <div class="interview__capture desc">О философии</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+    <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__col">
@@ -442,6 +499,7 @@
   </div>
 </footer>
 
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
