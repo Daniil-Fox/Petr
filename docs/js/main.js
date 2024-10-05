@@ -89,6 +89,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
 
+const menu = document.querySelector(".menu");
+const menuBtn = document.querySelector(".header__burger");
+menuBtn?.addEventListener("click", e => {
+  menu.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+});
 })();
 
 /******/ })()

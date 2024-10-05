@@ -5,13 +5,26 @@
   background-repeat: no-repeat;
   background-position: top;
 
+  @include small-tablet {
+    padding: 6.4rem 0;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     gap: 2rem;
 
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
     &:not(:last-child) {
       margin-bottom: 10rem;
+
+      @include small-tablet {
+        margin-bottom: 2.4rem;
+      }
     }
   }
 
@@ -21,6 +34,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include small-tablet {
+      gap: 4.8rem;
+    }
   }
 
   &__right {
@@ -38,12 +55,28 @@
   &__img {
     min-height: 56.3rem;
     width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include small-tablet {
+      min-height: auto;
+    }
 
     img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       display: block;
       width: 100%;
       height: 100%;
       object-position: right;
+
+      @include small-tablet {
+        position: static;
+        height: auto;
+      }
     }
   }
 
@@ -51,15 +84,32 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10rem 2rem;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4.8rem .8rem;
+    }
   }
 }
 
 .ch-item {
   display: block;
 
+  &--mask {
+    @include small-tablet {
+      order: 100;
+      grid-column: 2 span;
+    }
+  }
+
   &__img {
     height: 50rem;
     margin-bottom: 2.7rem;
+
+    @include small-tablet {
+      height: 25rem;
+      margin-bottom: 1.2rem;
+    }
 
     img {
       width: 100%;
@@ -70,6 +120,10 @@
   &__capture {
     p {
       color: #fff;
+
+      @include small-tablet {
+        font-size: 1.1rem;
+      }
     }
   }
 }

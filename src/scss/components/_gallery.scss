@@ -1,6 +1,8 @@
 .gallery {
   &:not(:last-child) {
     margin-bottom: 4rem;
+
+
   }
 
   &__slider {
@@ -44,12 +46,27 @@
   &--sec {
     margin-bottom: 20rem;
 
+    @include small-tablet {
+      margin-bottom: 7.2rem;
+    }
+
     .gallery {
 
       &__img,
       &__video {
         width: 36rem;
         height: 44.6rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @include small-tablet {
+          width: 22.7rem;
+          height: 30.9rem;
+        }
       }
     }
   }
