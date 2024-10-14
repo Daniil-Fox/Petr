@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,9 +21,9 @@
   <script defer src="js/main.js"></script>
 </head>
 
-<body class="page__body">
-  <div class="site-container">
-    <header class="header">
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
   <div class="container">
     <div class="header__container">
       <nav class="header__nav nav">
@@ -85,8 +85,8 @@
   </div>
 
 </header>
-    <main class="main">
-      <section class="hero">
+      <main class="main">
+        <section class="hero">
   <div class="container hero__container">
     <div class="hero__content">
       <div class="hero__logo">
@@ -159,7 +159,21 @@
             за волосами.
           </p>
 
-          <a href="#" class="btn btn-reset about-item__btn about__btn">
+          <a
+            href="#"
+            class="btn btn-reset about-item__btn about__btn"
+            data-modal-btn
+            data-smell="авокадо и ваниль"
+            data-title="Восстанавливающий шампунь для окрашенных и поврежденных волос, 250 мл."
+            data-desc="Шампунь «Petr Levenpol» для окрашенных и поврежденных волос восстанавливает и ухаживает без сульфатов, на основе мягких растительных ПАВ. Подходит для чувствительной кожи и аллергиков, очищает, сохраняя природный блеск и здоровье волос. Шампунь защищает от ломкости, можно использовать после процедур ламинирования и кератина. Не содержит силиконов, что обеспечивает легкость и чистоту. Подходит для ежедневного использования на любых типах волос. Разработан П. Левенполем на основе 20-летнего опыта в уходе за волосами."
+            data-gallery="./img/modal/01.webp, ./img/modal/02.webp, ./img/modal/03.webp"
+            data-country="Россия"
+            data-sertificate="google.com"
+            data-more="google.com"
+            data-apple="google.com"
+            data-wb="google.com"
+            data-ozon="google.com"
+          >
             где купить
           </a>
         </div>
@@ -185,7 +199,21 @@
             за волосами.
           </p>
 
-          <a href="#" class="btn btn-reset about-item__btn about__btn">
+          <a
+            href="#"
+            class="btn btn-reset about-item__btn about__btn"
+            data-modal-btn
+            data-smell="авокадо и ваниль"
+            data-title="Восстанавливающий шампунь для окрашенных и поврежденных волос, 250 мл."
+            data-desc="Шампунь «Petr Levenpol» для окрашенных и поврежденных волос восстанавливает и ухаживает без сульфатов, на основе мягких растительных ПАВ. Подходит для чувствительной кожи и аллергиков, очищает, сохраняя природный блеск и здоровье волос. Шампунь защищает от ломкости, можно использовать после процедур ламинирования и кератина. Не содержит силиконов, что обеспечивает легкость и чистоту. Подходит для ежедневного использования на любых типах волос. Разработан П. Левенполем на основе 20-летнего опыта в уходе за волосами."
+            data-gallery="./img/modal/03.webp, ./img/modal/02.webp, ./img/modal/03.webp"
+            data-country="Россия"
+            data-sertificate="google.com"
+            data-more="google.com"
+            data-apple="google.com"
+            data-wb="google.com"
+            data-ozon="google.com"
+          >
             где купить
           </a>
         </div>
@@ -199,7 +227,7 @@
   </div>
 </section>
 
-      <section class="gallery">
+        <section class="gallery">
   <h2 class="visually-hidden">title</h2>
 
   <div class="gallery__slider swiper">
@@ -367,7 +395,7 @@
   </div>
 </section>
 
-      <div class="interview" id="interview">
+        <div class="interview" id="interview">
   <div class="container">
     <h2 class="title2 interview__title">ИНТЕРВьЮ о бренде</h2>
     <div class="swiper interview__slider">
@@ -423,9 +451,94 @@
       </div>
     </div>
   </div>
+</div> <div class="modal">
+  <div class="modal__body">
+    <div class="modal__close"></div>
+    <div class="modal__ph">
+      <div class="modal__img">
+        <img src="./img/modal/01.webp" alt="" />
+      </div>
+      <div class="modal__img">
+        <img src="./img/modal/02.webp" alt="" />
+      </div>
+      <div class="modal__img">
+        <img src="./img/modal/03.webp" alt="" />
+      </div>
+    </div>
+
+    <div class="modal__content">
+      <div class="modal__title">
+        Восстанавливающий шампунь для окрашенных и поврежденных волос, 250 мл.
+      </div>
+      <div class="modal__info desc modal__text">
+        <p class="m-country"><span>Страна производства:</span> Россия</p>
+        <p class="m-smell"><span>Аромат:</span> авокадо и ваниль</p>
+        <p class="m-desc">
+          Шампунь «Petr Levenpol» восстанавливающий для окрашенных и
+          поврежденных волос, без сульфатов, на основе мягких аминокислотных ПАВ
+          растительного происхождения подходит для чувствительной кожи головы и
+          кожи, склонной к аллергиям.
+          <br />
+          <br />
+          Безсульфатная формула бережно очищает кожу головы и волосы, сохраняя
+          их природную красоту, здоровье и естественный блеск.
+        </p>
+
+        <div class="modal__links">
+          <a href="#" class="modal__link hero__link m-sertificate"
+            >Сертификат продукта</a
+          >
+          <a href="#" class="modal__link hero__link m-more">Подробнее</a>
+        </div>
+      </div>
+
+      <div class="modal__buy">Где купить?</div>
+
+      <div class="modal__where">
+        <a href="#" class="modal__item modal__item--apple modal-item">
+          <span class="modal-item__left">
+            <span class="modal-item__icon">
+              <img src="./img/yab.webp" alt="" />
+            </span>
+            <span class="modal-item__name">Золотое яблоко</span>
+          </span>
+          <span class="modal-item__cart">
+            <img src="./img/cart.webp" alt="" />
+          </span>
+        </a>
+        <a href="#" class="modal__item modal__item--wb modal-item">
+          <span class="modal-item__left">
+            <span class="modal-item__icon">
+              <img src="./img/wb.webp" alt="" />
+            </span>
+            <span class="modal-item__name">Wildberries</span>
+          </span>
+          <span class="modal-item__cart">
+            <img src="./img/cart.webp" alt="" />
+          </span>
+        </a>
+        <a href="#" class="modal__item modal__item--ozon modal-item">
+          <span class="modal-item__left">
+            <span class="modal-item__icon">
+              <img src="./img/ozon.webp" alt="" />
+            </span>
+            <span class="modal-item__name">Ozon</span>
+          </span>
+          <span class="modal-item__cart">
+            <img src="./img/cart.webp" alt="" />
+          </span>
+        </a>
+      </div>
+      <p class="modal__text desc">
+        Условия доставки и возврата соответствуют условиям сайта, через который
+        вы оформляете заказ
+      </p>
+    </div>
+  </div>
 </div>
-    </main>
-    <footer class="footer">
+
+      </main>
+      <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__col">
@@ -499,7 +612,6 @@
   </div>
 </footer>
 
-  </div>
-</body>
-
+    </div>
+  </body>
 </html>

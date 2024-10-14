@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head-sec.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      <main class="main">
+        <section class="enter">
+          <div class="enter__container">
+            <a href="./main.html" class="enter__logo">
+              <img src="./img/logo3.webp" alt="" />
+            </a>
+            <div class="enter__left">
+              <a href="#" class="enter__link">
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.6253 13.4587L5.66699 8.50033L10.6253 3.54199"
+                    stroke="#303030"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>одежда</span>
+              </a>
+              <div class="enter__img">
+                <picture>
+                  <source
+                    srcset="./img/clothes-mob.webp"
+                    type="image/webp"
+                    media="(max-width: 850px)"
+                  />
+                  <img src="./img/clothes.webp" alt="" />
+                </picture>
+              </div>
+            </div>
+            <div class="enter__right">
+              <div class="enter__link">
+                <span>косметика</span>
+                <svg
+                  width="17"
+                  height="18"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.37467 13.8864L11.333 8.92806L6.37467 3.96973"
+                    stroke="#303030"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="enter__img">
+                <picture>
+                  <source
+                    srcset="./img/cosmetic-mob.webp"
+                    type="image/webp"
+                    media="(max-width: 850px)"
+                  />
+                  <img src="./img/cosmetic.webp" alt="" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer-sec.html')
+      <!-- @include('html/h1.html') пример include -->
+    </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/just-validate@4.3.0/dist/just-validate.production.min.js
+"></script>
+    <script>
+      const validateForms = (selector, rules, checkboxes = [], afterSend) => {
+        const form = document?.querySelector(selector);
+
+        if (!form) {
+          console.error("Нет такого селектора!");
+          return false;
+        }
+
+        if (!rules) {
+          console.error("Вы не передали правила валидации!");
+          return false;
+        }
+
+        const validation = new JustValidate(selector);
+
+        for (let item of rules) {
+          validation.addField(item.ruleSelector, item.rules);
+        }
+
+        if (checkboxes.length) {
+          for (let item of checkboxes) {
+            validation.addRequiredGroup(
+              `${item.selector}`,
+              `${item.errorMessage}`
+            );
+          }
+        }
+
+        validation.onSuccess((ev) => {
+          let formData = new FormData(ev.target);
+
+          let xhr = new XMLHttpRequest();
+
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                if (afterSend) {
+                  afterSend();
+                }
+                console.log("Отправлено");
+              }
+            }
+          };
+
+          xhr.open("POST", "mail.php", true);
+          xhr.send(formData);
+
+          ev.target.reset();
+        });
+      };
+
+      const checks = [];
+      const rules1 = [
+        {
+          ruleSelector: ".input-email",
+
+          rules: [
+            {
+              rule: "required",
+            },
+            {
+              rule: "email",
+            },
+          ],
+        },
+      ];
+
+      const afterForm = () => {
+        console.log("Произошла отправка, тут можно писать любые действия");
+      };
+
+      validateForms(".footer-sec__form", rules1, checks, afterForm);
+    </script>
+  </body>
+</html>
